@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_12_PaymentKiosk"
         mc:Ignorable="d"
-        Title="MainWindow" Height="507" Width="400">
+        Title="Charge Customer" Height="507" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="0">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFAAAAAA" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <GroupBox x:Name="customergroupBox" Header="Customer Information" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="120" Width="372">
             <Grid HorizontalAlignment="Left" Height="100" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="362">
-                <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="25,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="25,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" BorderThickness="1"/>
                 <TextBox x:Name="phoneNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="196,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
                 <Label x:Name="customerNamelabel" Content="Customer Name" HorizontalAlignment="Left" Margin="19,19,0,0" VerticalAlignment="Top" Width="145"/>
                 <Label x:Name="customerPhoneNumberlabel" Content="Customer Phone Number" HorizontalAlignment="Left" Margin="196,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,0.923" Width="145"/>
@@ -29,7 +35,7 @@
                 <Label x:Name="slashLabel" Content="/" HorizontalAlignment="Left" Margin="78,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.439,0.011"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="completeTransactionButton" Content="Complete Transaction" HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top" Width="372" Height="93" Click="completeTransactionButton_Click"/>
+        <Button x:Name="completeTransactionButton" Content="Complete Transaction" Margin="10,380,12,16" Click="completeTransactionButton_Click" FontSize="18.667"/>
 
     </Grid>
 </Window>

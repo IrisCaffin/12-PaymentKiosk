@@ -41,14 +41,16 @@ namespace _12_PaymentKiosk
                 expiryDateYear = expiryYearTextBox.Text,
                 securityCode = securityTextBox.Text
             };
+
             try
             {
                 bool success = MoneyService.Charge(customer, creditCard, decimal.Parse(amountTextBox.Text));
 
                 if (success)
                 {
-                    MessageBox.Show("Payment succesful");
-                    MessageService.Text("You have received $" + amountTextBox.Text +".");
+                    
+                    MessageBox.Show("Payment from " + customer.name + " succesful.");
+                    MessageService.Text("You have received $" + amountTextBox.Text +" from " + customer.name + ".");               
                 }
             }
 

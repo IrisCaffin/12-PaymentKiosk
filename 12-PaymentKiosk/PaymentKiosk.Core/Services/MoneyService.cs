@@ -30,8 +30,7 @@ namespace PaymentKiosk.Core.Services
                 ExpirationYear = creditcard.expiryDateYear,
                 Cvc = creditcard.securityCode                          // optional
             };
-
-
+            
             var chargeService = new StripeChargeService(StripeApiKey);
             StripeCharge apiResponse = chargeService.Create(myCharge);
 
@@ -40,6 +39,8 @@ namespace PaymentKiosk.Core.Services
                 throw new Exception(apiResponse.FailureMessage);
             }
 
+
+           
             return apiResponse.Paid;
           
 

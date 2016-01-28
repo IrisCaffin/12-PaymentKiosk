@@ -12,7 +12,7 @@ namespace PaymentKiosk.Core.Services
     {
         public static void Text(string textMessage)
         {
-            // Use the twillion app to send a text
+            // Use the twilio app to send a text
             string AccountSid = "AC0b7c6dbd76844d6b1a965666690eeaca";
             string AuthToken = "070d50995710e42c016602ed3ec5825c";
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
